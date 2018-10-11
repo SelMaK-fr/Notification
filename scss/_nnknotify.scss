@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10 oct. 2018, 16:39:31
+    Author     : SelMaK
+*/
+
+.notifications{
+    position:fixed;
+    color:$white;
+    z-index: 10000;
+    top:0;
+    left:0;
+    right:0;
+    background-color:transprent;
+    
+    @include box-shadow(0px 4px 30px rgba(0,0,0,0.7));
+    
+    .notification{
+        
+        position: relative;
+        cursor:pointer;
+        border-bottom:1px solid $tertiary;
+        padding:1rem;
+
+        span{
+            font-family: "OpenSansSemiBold";
+        }
+        p{
+            margin-bottom: 0;
+        }
+        .left{
+            position: absolute;
+            height:100%;
+            text-align: center;
+            padding: 2rem;
+            top:0;
+            left:0;
+            color:$white;
+            border-right: 1px solid $tertiary;
+        }
+        .right{
+            margin-left:6rem;
+        }
+    }
+    .notification.success{
+        .left{
+          border-right: 1px solid #1eccaa;  
+        }
+        
+        border-bottom:1px solid #1eccaa;
+    }
+    .notification.danger{
+        .left{
+          border-right: 1px solid #e95654;  
+        }
+        border-bottom:1px solid #f15552;
+    }
+}
